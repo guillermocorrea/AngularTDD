@@ -3,6 +3,7 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
 
 1. Install:
   
+        npm install -g http-server
         npm install -g karma-cli
         npm install -g protractor
         webdriver-manager update
@@ -17,6 +18,10 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
 
         webdriver-manager start
 
-4. Run Protractor:
+4. Run http-server:
+
+        http-server -p 8080
+
+5. Run Protractor:
 
         protractor conf.js
