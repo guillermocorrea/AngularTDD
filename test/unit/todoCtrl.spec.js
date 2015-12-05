@@ -40,4 +40,14 @@ describe('when using a to-do list', function () {
 			expect(scope.list[lastIndexOfList]).toEqual(newItem);
 		});
 	});
+	
+	describe('when removing an item in list', function() {
+		beforeEach(function() {
+			scope.remove('refactor');
+		});
+		
+		it('should contains 2 list items', function() {
+			expect(scope.list.length).toBe(2);
+		});
+	});
 });

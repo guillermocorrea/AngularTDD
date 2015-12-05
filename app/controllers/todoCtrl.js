@@ -19,5 +19,12 @@
 		$scope.add = function (item) {
 			$scope.list.push(item);
 		};
+
+		$scope.remove = function (item) {
+			var idx = $scope.list.indexOf(item);
+			if (idx != -1) {
+				$scope.list.splice(idx, 1);
+			}
+		};
 	}
 })();
