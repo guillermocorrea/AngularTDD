@@ -1,5 +1,5 @@
 # AngularTDD
-Angular TDD examples using Karma and Protactor.
+Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protactor](https://angular.github.io/protractor/#/).
 
 1. Install:
   
