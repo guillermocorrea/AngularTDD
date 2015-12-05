@@ -1,0 +1,25 @@
+{
+  "name": "angular-tdd",
+  "version": "1.0.0",
+  "description": "TDD in Angular.js examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillermocorrea/AngularTDD.git"
+  },
+  "author": "luis correa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guillermocorrea/AngularTDD/issues"
+  },
+  "homepage": "https://github.com/guillermocorrea/AngularTDD#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6"
+  }
+}

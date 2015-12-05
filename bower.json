@@ -1,0 +1,23 @@
+{
+  "name": "angular-tdd",
+  "description": "TDD in Angular.js examples",
+  "main": "index.js",
+  "authors": [
+    "luis correa"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/guillermocorrea/AngularTDD",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-mocks": "~1.4.8"
+  }
+}
