@@ -4,6 +4,8 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
 1. Install:
   
         npm install -g karma-cli
+        npm install -g protractor
+        webdriver-manager update
         npm install
         bower install
 
