@@ -9,6 +9,14 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
         npm install
         bower install
 
-2. Run karma
+2. Run karma:
 
         karma start
+
+3. Start Selenium Server:
+
+        webdriver-manager start
+
+4. Run Protractor:
+
+        protractor conf.js
