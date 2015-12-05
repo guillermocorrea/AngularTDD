@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html data-ng-app="todo" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Todo Angular TDD App</title>
+</head>
+
+<body>
+
+	<div data-ng-controller="TodoController">
+		<ul data-ng-repeat="item in list">
+			<li>{{item}}</li>
+		</ul>
+	</div>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="app/todo.module.js"></script>
+	<script src="app/controllers/todoCtrl.js"></script>
+</body>
+
+</html>
