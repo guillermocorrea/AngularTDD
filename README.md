@@ -13,6 +13,10 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
 2. Run karma:
 
         karma start
+        
+- Coverage output:
+
+        build/coverage
 
 3. Start Selenium Server:
 
@@ -25,3 +29,10 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
 5. Run Protractor:
 
         protractor conf.js
+        
+// TODO: 
+      - Test $q promises
+      - Test ngResource
+      - Test directive
+      - Test filter
+      - Test service
