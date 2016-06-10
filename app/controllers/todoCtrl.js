@@ -2,18 +2,22 @@
 	'use strict';
 
 	angular
-		.module('todo')
+		.module('todo.controllers')
 		.controller('TodoController', TodoController);
 
-	TodoController.$inject = ['$scope'];
-	function TodoController($scope) {
+	TodoController.$inject = ['$scope', 'todoService'];
+	function TodoController($scope, todoService) {
 		var vm = this;
 		activate();
-		
+
 		////////////////
 
 		function activate() {
-			$scope.list = ['test', 'execute', 'refactor'];
+			todoService.getAll().then(function (result) {
+				$scope.list = result.data;
+			}, function (error) {
+				$scope.error = error.data;
+			});
 		}
 
 		$scope.add = function (item) {

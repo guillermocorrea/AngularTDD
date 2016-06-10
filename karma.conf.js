@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Sat Dec 05 2015 10:42:16 GMT-0500 (COT)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -17,8 +17,9 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'app/*.js',
+      'app/services/todo.services.module.js',
       'app/**/*.js',
+      'app/*.js',
       'test/unit/**/*.js'
     ],
 
@@ -31,14 +32,20 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'app/**/*.js': ['coverage']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
+    // optionally, configure the reporter
+    coverageReporter: {
+      type: 'html',
+      dir: 'build/coverage/'
+    },
 
     // web server port
     port: 9876,
