@@ -8,17 +8,33 @@
 
 <body>
 
-	<div data-ng-controller="TodoController">
-		<ul data-ng-repeat="item in list">
-			<li>{{item}}</li>
+	<!-- NAVIGATION -->
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" ui-sref="#">Angular TDD</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a ui-sref="home">Home</a></li>
+			<li><a ui-sref="todo">Todos</a></li>
+			<li><a ui-sref="about">About</a></li>
 		</ul>
+	</nav>
+
+	<!-- MAIN CONTENT -->
+	<div class="container">
+		<div ui-view></div>
 	</div>
 
-	<script src="bower_components/angular/angular.js"></script>
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="node_modules/angular-mocks/angular-mocks.js"></script>
+	<script src="app/routes/todo.routes.module.js"></script>
+	<script src="app/routes/todo.routes.js"></script>
 	<script src="app/services/todo.services.module.js"></script>
 	<script src="app/services/todo.service.js"></script>
 	<script src="app/controllers/todo.controllers.module.js"></script>
 	<script src="app/todo.module.js"></script>
+	<script src="app/todo.module.config.js"></script>
 	<script src="app/controllers/todoCtrl.js"></script>
 </body>
 

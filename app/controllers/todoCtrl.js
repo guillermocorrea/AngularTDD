@@ -1,34 +1,33 @@
-(function () {
-	'use strict';
+'use strict';
 
-	angular
-		.module('todo.controllers')
-		.controller('TodoController', TodoController);
+angular
+    .module('todo.controllers')
+    .controller('TodoController', TodoController);
 
-	TodoController.$inject = ['$scope', 'todoService'];
-	function TodoController($scope, todoService) {
-		var vm = this;
-		activate();
+TodoController.$inject = ['todoService', 'todos'];
+function TodoController(todoService, todos) {
+    var vm = this;
+    vm.add = add;
+    vm.remove = remove;
+    
+    init();
 
-		////////////////
+    function init() {
+        if (todos && todos.isValid) {
+            vm.list = todos.data;
+        } else {
+            vm.error = todos.error;
+        }
+    }
 
-		function activate() {
-			todoService.getAll().then(function (result) {
-				$scope.list = result.data;
-			}, function (error) {
-				$scope.error = error.data;
-			});
-		}
+    function add(item) {
+        vm.list.push(item);
+    }
 
-		$scope.add = function (item) {
-			$scope.list.push(item);
-		};
-
-		$scope.remove = function (item) {
-			var idx = $scope.list.indexOf(item);
-			if (idx != -1) {
-				$scope.list.splice(idx, 1);
-			}
-		};
-	}
-})();
+    function remove(item) {
+        var idx = vm.list.indexOf(item);
+        if (idx != -1) {
+            vm.list.splice(idx, 1);
+        }
+    };
+}

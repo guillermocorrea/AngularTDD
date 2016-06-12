@@ -1,0 +1,8 @@
+<div>
+    <ul data-ng-repeat="item in $ctrl.list">
+        <li>{{item}}</li>
+    </ul>
+    <div data-ng-if="$ctrl.error">
+        {{$ctrl.error.message}}
+    </div>
+</div>

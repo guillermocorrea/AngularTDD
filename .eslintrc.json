@@ -1,0 +1,27 @@
+{
+    "extends": "angular",
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "angular/no-services": [
+            2,
+            {
+                "controller": [
+                    "$http",
+                    "$q"
+                ]
+            }
+        ]
+    },
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "angular": true
+    },
+    "settings": {
+        "angular": 1
+    }
+}
