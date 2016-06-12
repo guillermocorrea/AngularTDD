@@ -30,9 +30,8 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
 
         protractor conf.js
         
-// TODO: 
-      - Test $q promises
-      - Test ngResource
-      - Test directive
-      - Test filter
-      - Test service
+# // TODO:
+       - Setup webpack
+       - Setup TypeScript
+       - Test directive
+       - Test filter
