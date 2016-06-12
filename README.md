@@ -35,3 +35,4 @@ Angular TDD examples using [Karma](https://karma-runner.github.io/) and [Protact
        - Setup TypeScript
        - Test directive
        - Test filter
+       - Test component
